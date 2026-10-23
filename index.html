@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Name – Developer Portfolio</title>
+<meta name="description" content="Full-stack developer building .NET business systems, multiplayer web games and AI tooling.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,700;12..96,800&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef1f4; --ink:#14202b; --muted:#56646f; --line:#c9d1d8; --accent:#2b4bff; --chip:#dde3ea;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#10161c; --ink:#e8edf1; --muted:#98a6b2; --line:#2a353f; --accent:#7f94ff; --chip:#1b242d;}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "Instrument Sans",system-ui,sans-serif}
+a{color:inherit}
+a:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.wrap{max-width:960px;margin:0 auto;padding:0 24px}
+header.top{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+header.top a{text-decoration:none;font-weight:600}
+nav{display:flex;gap:22px}
+nav a{color:var(--muted)}
+nav a:hover{color:var(--ink)}
+.hero{padding:72px 0 64px}
+.hero h1{font:800 clamp(52px,12vw,132px)/.92 "Bricolage Grotesque",sans-serif;letter-spacing:-.04em;margin:0 0 28px}
+.hero p{max-width:34em;font-size:21px;color:var(--muted);margin:0 0 32px}
+.btns{display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;border:2px solid var(--ink);text-decoration:none;font-weight:600}
+.btn.primary{background:var(--ink);color:var(--bg)}
+.btn:hover{border-color:var(--accent)}
+.btn.primary:hover{background:var(--accent);color:#fff}
+section{padding:56px 0;border-top:1px solid var(--line)}
+h2{font:700 32px/1.1 "Bricolage Grotesque",sans-serif;letter-spacing:-.02em;margin:0 0 32px}
+.proj{display:grid;grid-template-columns:1fr 2fr;gap:8px 40px;padding:28px 0;border-top:1px solid var(--line)}
+.proj:first-of-type{border-top:0;padding-top:0}
+.proj h3{font:700 24px/1.2 "Bricolage Grotesque",sans-serif;margin:0}
+.proj .status{color:var(--muted);font-size:15px;margin-top:4px}
+.proj p{margin:0 0 12px;max-width:38em}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px;padding:0;list-style:none}
+.tags li{background:var(--chip);padding:2px 10px;border-radius:6px;font-size:14px}
+.links a{margin-right:18px;font-weight:600;color:var(--accent)}
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:28px}
+.skills h3{font:700 18px "Bricolage Grotesque",sans-serif;margin:0 0 8px}
+.skills p{margin:0;color:var(--muted)}
+footer{padding:48px 0 64px;border-top:1px solid var(--line);color:var(--muted)}
+footer a{color:var(--ink);font-weight:600}
+@media (max-width:700px){.proj{grid-template-columns:1fr}nav{gap:14px}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <a href="#">Your Name</a>
+    <nav><a href="#work">Work</a><a href="#skills">Skills</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <div class="hero">
+    <h1>Your Name</h1>
+    <p>I build business systems in .NET and SQL Server, multiplayer games for the browser, and tools that make AI coding assistants more useful.</p>
+    <div class="btns">
+      <a class="btn primary" href="#work">See my work</a>
+      <a class="btn" href="https://github.com/morsevii-coder">GitHub profile</a>
+    </div>
+  </div>
+
+  <section id="work">
+    <h2>Selected work</h2>
+
+    <article class="proj">
+      <div><h3>3D Archer</h3><div class="status">Live, in development</div></div>
+      <div>
+        <p>A multiplayer first-person archery game that runs in the browser. Join public matches or create a private lobby. Arrows curve downward, trees block shots, and a kill feed tracks each round.</p>
+        <p>Players switch between a crossbow, bow, musket, dagger and knife, each with its own draw time and range. Skirmish mode respawns players at a new spot after every death.</p>
+        <ul class="tags"><li>Node.js</li><li>WebSockets</li><li>three.js</li><li>Railway</li></ul>
+        <div class="links"><a href="https://github.com/morsevii-coder/3d-archer">Source</a><a href="#">Play</a></div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div><h3>SuperBrain</h3><div class="status">Daily use</div></div>
+      <div>
+        <p>A personal knowledge base in Obsidian that tracks about 100 projects, their decisions, known issues and reusable code patterns. A local MCP server lets GitHub Copilot search the vault before it answers, so it starts with the right context and uses fewer tokens.</p>
+        <ul class="tags"><li>Python</li><li>MCP</li><li>Obsidian</li><li>VS Code</li><li>GitHub Copilot</li></ul>
+        <div class="links"><a href="https://github.com/morsevii-coder/superbrain">Source</a></div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div><h3>Shorts generator</h3><div class="status">In progress</div></div>
+      <div>
+        <p>A web app that generates YouTube Shorts automatically and deploys to Vercel. Built with an open-source shorts generator as the reference design.</p>
+        <ul class="tags"><li>Vercel</li><li>JavaScript</li></ul>
+        <div class="links"><a href="https://github.com/morsevii-coder/shorts-generator">Source</a></div>
+      </div>
+    </article>
+
+    <article class="proj">
+      <div><h3>Business web apps</h3><div class="status">Production systems</div></div>
+      <div>
+        <p>More than 100 internal and customer-facing systems, including an inquiry system, an online office-supplies store, an overtime tracker and a store-wide stock search. Most use ASP.NET MVC, SQL Server, jQuery, Crystal Reports and iText7.</p>
+        <ul class="tags"><li>C#</li><li>ASP.NET MVC 5</li><li>SQL Server</li><li>ADO.NET</li><li>jQuery</li></ul>
+      </div>
+    </article>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div><h3>Back end</h3><p>C#, ASP.NET MVC, ADO.NET, T-SQL, Node.js</p></div>
+      <div><h3>Front end</h3><p>JavaScript, jQuery, three.js, HTML and CSS</p></div>
+      <div><h3>Tooling</h3><p>Git, VS Code, GitHub Copilot, MCP servers, Railway, Vercel</p></div>
+      <div><h3>Reporting</h3><p>Crystal Reports, iText7 PDF generation, Excel exports</p></div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>Open to new projects and roles. Email me at <a href="mailto:you@example.com">you@example.com</a> or find me on <a href="https://github.com/morsevii-coder">GitHub</a>.</p>
+  </footer>
+</div>
+</body>
+</html>
